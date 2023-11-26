@@ -1,2 +1,2 @@
 # cold
-Cold language dialect header
+C language dialect header
