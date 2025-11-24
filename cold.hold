@@ -1,3 +1,4 @@
+
 /*! cold.hold
 
 MIT License
@@ -22,12 +23,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
 
-#ifndef COLD_H
-#define COLD_H
+#ifndef COLD_HOLD
+#define COLD_HOLD
+#undef  HOT_HOLD
 
 #define EMPTY_MACRO /*-*/
 
 /*!CKeywords:{*/
+	#ifdef a
 	#define typedef /*------------*/ typedef
 	#define extern /*-------------*/ extern
 	#define static /*-------------*/ static
@@ -60,7 +63,7 @@ SOFTWARE. */
 	#define continue /*-----------*/ continue
 	#define goto /*---------------*/ goto
 	#define return /*-------------*/ return
-
+	#endif
 	#undef  inline
 	#define inline /*-------------*/ EMPTY_MACRO
 /*!}*/
@@ -79,15 +82,15 @@ SOFTWARE. */
 	#define or /*-----------------*/ ||
 	#define not /*----------------*/ !
 	#define elif /*---------------*/ else if
-	#undef  switch
-	#define switch /*-------------*/ switch(
-	#define over /*---------------*/ ){
 	#define to /*-----------------*/ case
 	#define off /*----------------*/ default
-	#define end /*----------------*/ }
 	#define brk /*----------------*/ break
 	#define jmp /*----------------*/ goto
 	#define ret /*----------------*/ return
+/*!}*/
+
+/*!coldStdFunctions:{*/
+	#define ln(n) /*--------------*/ (log(n))
 /*!}*/
 
 /*!coldFunctions:{*/
@@ -108,18 +111,18 @@ SOFTWARE. */
 /*!}*/
 
 /*!defs:{*/
-	def unsigned int /*--*/ uint;
-	def unsigned char /*-*/ bool;
-#ifdef UINT64_MAX
-	def int8_t /*--------*/ int8;
-	def int16_t /*-------*/ int16;
-	def int32_t /*-------*/ int32;
-	def int64_t /*-------*/ int64;
-	def uint8_t /*-------*/ uint8;
-	def uint16_t /*------*/ uint16;
-	def uint32_t /*------*/ uint32;
-	def uint64_t /*------*/ uint64;
-#endif
+	#define bool /*---------------*/ unsigned char
+	#define uint /*---------------*/ unsigned int
+	#ifdef  UINT64_MAX
+	#define int8 /*---------------*/ int8_t
+	#define int16 /*--------------*/ int16_t
+	#define int32 /*--------------*/ int32_t
+	#define int64 /*--------------*/ int64_t
+	#define uint8 /*--------------*/ uint8_t
+	#define uint16 /*-------------*/ uint16_t
+	#define uint32 /*-------------*/ uint32_t
+	#define uint64 /*-------------*/ uint64_t
+	#endif
 /*!}*/
 
 #endif
