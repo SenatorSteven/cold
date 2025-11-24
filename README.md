@@ -1,9 +1,9 @@
 
 # [kʰoʊld]
-a C language dialect header
+A C language dialect header
 
-# features
-- header-only
-- minimal changes from C
-- additions that give it a look similar to that of Assembly languages
-- a second header that undoes the features of the first
+# Features
+- Header-only
+- Minimal changes from C
+- Additions that give it a look similar to that of Assembly languages
+- A second header that undoes the features of the first
