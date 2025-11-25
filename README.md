@@ -1,5 +1,7 @@
 
-<!-- MIT License
+<!-- README.md
+
+MIT License
 
 Copyright (C) 2022 Stefanos "Steven" Tsakiris
 
