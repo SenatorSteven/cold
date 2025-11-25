@@ -26,7 +26,7 @@ SOFTWARE. -->
 # [kʰoʊld]
 A C language dialect library
 
-# Features
+## Features
 - Header-only
 - Minimal changes from C
 - Additions that give it a look similar to that of Assembly languages
